@@ -130,29 +130,29 @@ date_default_timezone_set('Asia/Manila');
 </head>
 <body>
     <div class="register-container">
-        <h1 class="logo-title">OJT TRACKER</h1>
-        <p class="subtitle">Please register to continue</p>
+        <h1 class="logo-title text-center">OJT TRACKER</h1>
+        <p class="subtitle text-center">Please register to continue</p>
         
         <form action="register-backend.php" method="post">
             <input type="hidden" name="created_at" value="<?php echo date('Y-m-d H:i:s'); ?>">
             
             <div class="mb-3">
                 <label for="firstname" class="form-label">First Name</label>
-                <input type="text" name="firstname" id="firstname" placeholder="Enter your first name" class="form-control">
+                <input type="text" name="firstname" id="firstname" placeholder="Enter your first name" class="form-control" required>
             </div>
             
             <div class="mb-3">
                 <label for="lastname" class="form-label">Last Name</label>
-                <input type="text" name="lastname" id="lastname" placeholder="Enter your last name" class="form-control">
+                <input type="text" name="lastname" id="lastname" placeholder="Enter your last name" class="form-control" required>
             </div>
             
             <div class="mb-3">
                 <label for="idnumber" class="form-label">ID Number</label>
-                <input type="text" name="idnumber" id="idnumber" placeholder="Enter your ID number" class="form-control">
+                <input type="text" name="idnumber" id="idnumber" placeholder="Enter your ID number" class="form-control" required>
             </div>
 
             <div class="mb-3">
-                <label for="gender" class="form-label">Gender</label>
+                <label for="gender" class="form-label">Gender</label required>
                 <select name="gender" id="gender" class="form-control">
                     <option value="">Select Gender</option>
                     <option value="Male">Male</option>
@@ -179,12 +179,9 @@ date_default_timezone_set('Asia/Manila');
             </div>
             
             <div class="mb-4">
-                <label for="password" class="form-label">Password</label>
+                <label for="password" class="form-label">Password</label required>
                 <div class="password-container">
                     <input type="password" id="password" name="password" placeholder="Enter your password" class="form-control">
-                    <button type="button" class="password-toggle" onclick="togglePassword()">
-                        <i id="eyeIcon" class="fa fa-eye"></i>
-                    </button>
                 </div>
             </div>
             

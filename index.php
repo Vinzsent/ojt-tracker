@@ -124,8 +124,8 @@
 </head>
 <body>
     <div class="login-container">
-        <h1 class="logo-title">OJT TRACKER</h1>
-        <p class="subtitle">Please login to continue</p>
+        <h1 class="logo-title text-center">OJT TRACKER</h1>
+        <p class="subtitle text-center">Please login to continue</p>
         
         <form action="login-backend.php" method="post">
             <input type="hidden" name="status" value="online">
