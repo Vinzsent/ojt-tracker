@@ -133,8 +133,8 @@ include('config.php');
         }
 
         .btn-back:hover {
-            background-color: var(--primary-green);
-            color: white;
+            background-color: var(--secondary-gold);
+            color: var(--primary-green);
             transform: translateY(-2px);
         }
 
@@ -147,7 +147,7 @@ include('config.php');
         }
 
         .btn-print:hover {
-            background-color: #e6a600;
+            background-color: var(--secondary-gold);
             color: var(--primary-green);
             transform: translateY(-2px);
         }
@@ -261,7 +261,7 @@ include('config.php');
             <div class="card-body">
                 <div class="table-responsive">
                     <table class="table table-hover align-middle">
-                        <thead class="table-success">
+                        <thead class="table-success text-dark">
                             <tr>
                                 <th>ID Number</th>
                                 <th>Name</th>
@@ -282,7 +282,7 @@ include('config.php');
                                     <td><?php echo htmlspecialchars($user['firstname'] . ' ' . $user['lastname']); ?></td>
                                     <td>
                                         <span class="badge <?php
-                                                            echo $user['role'] === 'Admin' ? 'bg-danger' : ($user['role'] === 'Teacher' ? 'bg-primary' : 'bg-success');
+                                                            echo $user['role'] === 'Admin' ? 'bg-danger' : ($user['role'] === 'Teacher' ? 'bg-danger' : 'bg-success');
                                                             ?>">
                                             <?php echo htmlspecialchars($user['role']); ?>
                                         </span>
