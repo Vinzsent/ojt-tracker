@@ -4,6 +4,7 @@
 date_default_timezone_set('Asia/Manila');
 ?>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -128,24 +129,26 @@ date_default_timezone_set('Asia/Manila');
         }
     </style>
 </head>
+
 <body>
     <div class="register-container">
         <h1 class="logo-title text-center">OJT TRACKER</h1>
         <p class="subtitle text-center">Please register to continue</p>
-        
+
         <form action="register-backend.php" method="post">
             <input type="hidden" name="created_at" value="<?php echo date('Y-m-d H:i:s'); ?>">
-            
+            <input type="hidden" name="status" id="status" value="active">
+
             <div class="mb-3">
                 <label for="firstname" class="form-label">First Name</label>
                 <input type="text" name="firstname" id="firstname" placeholder="Enter your first name" class="form-control" required>
             </div>
-            
+
             <div class="mb-3">
                 <label for="lastname" class="form-label">Last Name</label>
                 <input type="text" name="lastname" id="lastname" placeholder="Enter your last name" class="form-control" required>
             </div>
-            
+
             <div class="mb-3">
                 <label for="idnumber" class="form-label">ID Number</label>
                 <input type="text" name="idnumber" id="idnumber" placeholder="Enter your ID number" class="form-control" required>
@@ -177,16 +180,16 @@ date_default_timezone_set('Asia/Manila');
                     </div>
                 </div>
             </div>
-            
+
             <div class="mb-4">
                 <label for="password" class="form-label">Password</label required>
                 <div class="password-container">
                     <input type="password" id="password" name="password" placeholder="Enter your password" class="form-control">
                 </div>
             </div>
-            
+
             <button type="submit" class="btn btn-primary w-100">Register</button>
-            
+
             <div class="login-link text-center">
                 Already have an account? <a href="index.php">Login</a>
             </div>
@@ -228,4 +231,5 @@ date_default_timezone_set('Asia/Manila');
         });
     </script>
 </body>
+
 </html>
